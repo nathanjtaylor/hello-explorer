@@ -2,3 +2,7 @@
 a.active {
     font-weight: bold;
 }
+
+body{
+    background-image:url(starryscape.png)
+}
