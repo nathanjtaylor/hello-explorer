@@ -10,6 +10,9 @@ let angle = 0;
 const centerX = container.offsetWidth / 2;
 const centerY = container.offsetHeight / 2;
 
+//function startAnimation() {
+//}
+
 function animate() {
     // Calculate new position
     const x = centerX + radius * Math.cos(angle) - (moon.offsetWidth / 2);
@@ -24,10 +27,18 @@ function animate() {
     
     // Continue animation
     requestAnimationFrame(animate);
+
+    function savePosition() {
+        // Store moon's location 
+        sessionStorage.setItem(moonX, x);
+        sessionStorage.setItem(moonY, y);
+    }
 }
+
 
 // Start animation
 document.addEventListener("DOMContentLoaded", animate);
+window.addEventListener('beforeunload', savePosition);
 
 
 
