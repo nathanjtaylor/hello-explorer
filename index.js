@@ -41,4 +41,16 @@ document.addEventListener("DOMContentLoaded", animate);
 window.addEventListener('beforeunload', savePosition);
 
 
+/*
+SOURCES
 
+Source: Claude AI (Anthropic)
+Prompts: 
+"Alright please give me an informational blurb about the Earth and then a similar one about the moon that would display on a simple static website. Be sure to include one humorous fact about each. Thanks"
+"how might I make a div element "revolve" around another one using just Javascript"
+
+Source: https://stackoverflow.com/questions/7048313/how-to-have-multiple-css-transitions-on-an-element
+Source: https://www.w3schools.com/jsref/met_win_requestanimationframe.asp
+Source: https://stackoverflow.com/questions/13443503/run-javascript-code-on-window-close-or-page-refresh
+
+*/
