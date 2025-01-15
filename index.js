@@ -10,13 +10,20 @@ let angle = 0;
 const centerX = container.offsetWidth / 2;
 const centerY = container.offsetHeight / 2;
 
-//function startAnimation() {
-//}
+
+function startAnimation() {
+    angle = parseFloat(sessionStorage.getItem("moonAngle"));
+    if (angle === null) {
+        angle = 0;
+    }
+    animate();
+}
 
 function animate() {
     // Calculate new position
     const x = centerX + radius * Math.cos(angle) - (moon.offsetWidth / 2);
     const y = centerY + radius * Math.sin(angle) - (moon.offsetHeight / 2);
+
     
     // Update moon position
     moon.style.left = `${x}px`;
@@ -27,19 +34,15 @@ function animate() {
     
     // Continue animation
     requestAnimationFrame(animate);
-
-    function savePosition() {
-        // Store moon's location 
-        sessionStorage.setItem(moonX, x);
-        sessionStorage.setItem(moonY, y);
-    }
 }
 
+function savePosition() {
+    // Store moon's location
+    sessionStorage.setItem("moonAngle", angle);
+}
 
 // Start animation
-document.addEventListener("DOMContentLoaded", animate);
-window.addEventListener('beforeunload', savePosition);
-
+document.addEventListener("DOMContentLoaded", startAnimation);
 
 /*
 SOURCES
@@ -52,5 +55,6 @@ Prompts:
 Source: https://stackoverflow.com/questions/7048313/how-to-have-multiple-css-transitions-on-an-element
 Source: https://www.w3schools.com/jsref/met_win_requestanimationframe.asp
 Source: https://stackoverflow.com/questions/13443503/run-javascript-code-on-window-close-or-page-refresh
-
+Source: https://www.w3schools.com/howto/howto_css_text_selection.asp
+Source: https://cssgradient.io/ for earth and moon gradiant
 */

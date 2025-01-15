@@ -16,6 +16,12 @@ header{
     border-radius: 30px;
 }
 
+.emoji{
+    max-height: 40px;
+    width: auto;
+}
+
+
 h1{
     text-align: center;
     color: white;

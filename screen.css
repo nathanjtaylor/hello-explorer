@@ -16,6 +16,11 @@ header{
     border-radius: 30px;
 }
 
+.emoji{
+    max-height: 40px;
+    width: auto;
+}
+
 h1{
     text-align: center;
     color: white;
@@ -116,11 +121,3 @@ p{
         font-size: 10px;
     }
 }
-
-
-/*
-SOURCES
-
-Source: https://www.w3schools.com/howto/howto_css_text_selection.asp
-Source: https://cssgradient.io/ for earth and moon gradiant
-*/
