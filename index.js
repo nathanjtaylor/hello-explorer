@@ -12,8 +12,8 @@ const centerY = container.offsetHeight / 2;
 
 
 function startAnimation() {
-    angle = parseFloat(sessionStorage.getItem("moonAngle"));
-    if (angle === null) {
+    angle = parseFloat(sessionStorage.getItem("moonAngle")) || 0;
+    if (angle === null || angle === NaN) {
         angle = 0;
     }
     animate();
